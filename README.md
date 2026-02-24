@@ -43,6 +43,7 @@ Full implementation of Retrieval-Augmented Generation with document management, 
 | ![Hugging Face](https://img.shields.io/badge/-Transformers-FFD21E?style=flat&logo=huggingface&logoColor=black) | Pre-trained models |
 | ![NumPy](https://img.shields.io/badge/-NumPy-013243?style=flat&logo=numpy&logoColor=white) | Numerical computations |
 | ![FAISS](https://img.shields.io/badge/-FAISS-00ADD8?style=flat) | Vector similarity search |
+| ![Ollama](https://ollama.com/public/ollama.png)
 
 </div>
 
@@ -77,7 +78,15 @@ transformer/
 │   ├── rag_model.py         Complete RAG pipeline
 │   ├── main.py              Usage examples
 │   └── requirements.txt     Dependencies
-│
+|     └──rag-gpt/
+          ├── main.py              ← FastAPI backend
+          ├── index.html           ← Frontend chat UI
+          ├── uploaded_docs/       ← Your uploaded documents stored here
+          ├── vector_db/           ← ChromaDB vector storage (auto-created)
+          │   └── croma.sqlite3   ← Persistent vector database
+          ├── venv/                ← Python virtual environment
+          └── README.md
+│     └── tiny-llama-1.1B/
 ├── part-one.py              Transformer fundamentals
 ├── encoder-decoder.py       Sequence-to-sequence models
 ├── tokenizer.py             Custom tokenization
